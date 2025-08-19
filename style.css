@@ -52,6 +52,7 @@
   padding: 0px;
   margin: 0;
   box-sizing: border-box;
+  font-size: 21px;
 }
 
 body {
@@ -65,9 +66,8 @@ body {
 
 .container {
   height: 100%;
-  max-width: 80%;
-  width: 80%;
-  margin: 0 auto;
+  max-width: 70%;
+  margin: auto;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -76,6 +76,7 @@ body {
 }
 
 .container main {
+  width: 80%;
   padding: 1rem;
 }
 
@@ -129,11 +130,16 @@ input:focus::placeholder {
 }
 
 .output::before {
-  content: "✅";
+  content: "✔️";
+  text-align: left;
 }
 
 .output.has_errors::before {
   content: "✖️";
+}
+
+.output.has_errors ul {
+  padding: 1rem;
 }
 
 .hidden {
