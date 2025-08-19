@@ -43,10 +43,11 @@ form.addEventListener("submit", function (event) {
 function showMessage(message) {
   const output = document.querySelector(".output");
   output.classList.add("show");
+  output.classList.remove("has_errors");
+
+  output.innerHTML = "";
 
   const text = document.createElement("p");
-  text.innerHTML = "";
-
   text.textContent = message;
 
   output.appendChild(text);
@@ -56,9 +57,9 @@ function showErrors(errors) {
   const output = document.querySelector(".output");
   output.classList.add("show");
   output.classList.add("has_errors");
+  output.innerHTML = "";
 
   const list = document.createElement("ul");
-  list.innerHTML = "";
 
   for (let key of Object.keys(errors)) {
     const li = document.createElement("li");
