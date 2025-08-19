@@ -45,6 +45,8 @@ function showMessage(message) {
   output.classList.add("show");
 
   const text = document.createElement("p");
+  text.innerHTML = "";
+
   text.textContent = message;
 
   output.appendChild(text);
@@ -56,6 +58,7 @@ function showErrors(errors) {
   output.classList.add("has_errors");
 
   const list = document.createElement("ul");
+  list.innerHTML = "";
 
   for (let key of Object.keys(errors)) {
     const li = document.createElement("li");
