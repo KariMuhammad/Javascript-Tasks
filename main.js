@@ -56,6 +56,7 @@ function showErrors(errors) {
   output.classList.add("has_errors");
 
   const list = document.createElement("ul");
+  list.innerHTML = "";
 
   for (let key of Object.keys(errors)) {
     const li = document.createElement("li");
