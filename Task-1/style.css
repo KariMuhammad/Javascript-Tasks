@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
+
+.tajawal-extralight {
+  font-family: "Tajawal", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.tajawal-light {
+  font-family: "Tajawal", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.tajawal-regular {
+  font-family: "Tajawal", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.tajawal-medium {
+  font-family: "Tajawal", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.tajawal-bold {
+  font-family: "Tajawal", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.tajawal-extrabold {
+  font-family: "Tajawal", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.tajawal-black {
+  font-family: "Tajawal", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+:root {
+  --primary: #470d99;
+  --secondary: #1b0338;
+  --bg-light: #f8f9fa;
+}
+
+* {
+  padding: 0px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  direction: rtl;
+  height: 100vh;
+  font-family: "Tajawal", Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  background-color: var(--bg-light);
+}
+
+.container {
+  height: 100%;
+  max-width: 80%;
+  width: 80%;
+  margin: 0 auto;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container main {
+  padding: 1rem;
+}
+
+.form-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 0.2rem 0.4rem;
+  margin: 0.5rem 0;
+  border: none;
+  outline: none;
+  border: 1px solid #efefef;
+  border-radius: 0.3rem;
+  box-shadow: 1px 1px 0px #efefef;
+}
+
+input::placeholder {
+  transition: all 0.5s ease-in-out;
+  transform-origin: center right;
+}
+
+input:focus::placeholder {
+  transform-origin: center right;
+  scale: 0;
+}
+
+.form-btn {
+  background-color: var(--primary);
+  color: white;
+  padding: 0.4rem;
+  border-radius: 0.3rem;
+  transition: all 0.1s ease-in;
+
+  cursor: pointer;
+}
+
+.form-btn:hover {
+  background-color: var(--secondary);
+  transform: translateY(-3px);
+}
+
+.output {
+  background-color: #470d99;
+  color: white;
+  padding: 1rem;
+}
+
+.output::before {
+  content: "✅";
+}
+
+.output.has_errors::before {
+  content: "✖️";
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+.output.show {
+  display: block;
+  visibility: visible;
+}
+
+.output.has_errors {
+  background-color: rgb(235, 102, 102);
+  color: white;
+}
+
+.output.has_errors li {
+  padding: 0.3rem;
+}
